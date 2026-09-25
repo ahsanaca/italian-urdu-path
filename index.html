@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>اطالوی اکیڈمی — اردو میں اطالوی زبان سیکھیں</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="engine.css">
+<style>
+  /* Urdu explanation text reads much better in a proper Nastaliq/Naskh
+     font than the default Latin-first stack engine.css ships with —
+     scoped so Italian words (native-text etc.) keep their own font. */
+  html.rtl-explain body { font-family: 'Noto Nastaliq Urdu', 'Segoe UI', Tahoma, sans-serif; }
+  html.rtl-explain .native-text,
+  html.rtl-explain .ch-arabic, html.rtl-explain .ch-arabic-big, html.rtl-explain .idx-ar,
+  html.rtl-explain .wc-ar, html.rtl-explain .wc-translit, html.rtl-explain .pb-ar,
+  html.rtl-explain .pb-translit, html.rtl-explain .ex-ar, html.rtl-explain .ex-translit,
+  html.rtl-explain .fc-ar, html.rtl-explain .fc-translit, html.rtl-explain .sp-ar,
+  html.rtl-explain .sp-translit, html.rtl-explain .word-chip, html.rtl-explain .sentence-slot,
+  html.rtl-explain .speak-result .heard {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+</style>
+</head>
+<body>
+
+<div class="app-bar">
+  <div class="brand" onclick="showDashboard()">🇮🇹 اطالوی اکیڈمی</div>
+  <div class="nav-links">
+    <button onclick="showDashboard()">🏠 ڈیش بورڈ</button>
+    <button onclick="showIndex()">📑 فہرست</button>
+    <button id="signOutBtn" onclick="doSignOut()" style="display:none;">🚪 سائن آؤٹ</button>
+  </div>
+  <div class="overall-progress">
+    <span>مجموعی</span>
+    <div class="overall-bar"><div class="overall-fill" id="overallFill" style="width:0%"></div></div>
+    <span id="overallPct">0%</span>
+  </div>
+</div>
+
+<div class="page" id="pageRoot"></div>
+
+<footer>اطالوی اکیڈمی (اردو ایڈیشن) · مفت ٹرائل · خود رفتار سیکھنے کے لیے تیار کردہ اصل مواد<br>یہ ایک ابتدائی ٹرائل ہے — کوئی غلطی، گرامر کی خامی یا الجھن پیدا کرنے والی بات نظر آئے تو براہ کرم بتائیں تاکہ ہم اسے درست کر سکیں۔</footer>
+
+<script src="content.js"></script>
+<script src="engine.js"></script>
+<script src="voice-module.js"></script>
+</body>
+</html>
