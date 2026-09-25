@@ -116,7 +116,12 @@ const units = [
   { id:"u2", track:"standard", title:"یونٹ 2 — آرٹیکلز، جنس اور تعداد", desc:"ہر اسم کی ایک جنس ہوتی ہے — اسے پہچاننا اور درست آرٹیکل لگانا سیکھیں۔" },
   { id:"u3", track:"standard", title:"یونٹ 3 — Avere اور ملکیت", desc:"\"رکھنا\" کا فعل، اور صفت کی بنیادی موافقت۔" },
   { id:"u4", track:"standard", title:"یونٹ 4 — حال کے افعال", desc:"باقاعدہ -are/-ere/-ire افعال، اور حقیقی جملے بنانا۔" },
-  { id:"u5", track:"standard", title:"یونٹ 5 — گنتی، رنگ اور سوالات", desc:"گنتی، اشیاء کی وضاحت، اور کون/کیا/کہاں/کب/کیوں پوچھنا۔" }
+  { id:"u5", track:"standard", title:"یونٹ 5 — گنتی، رنگ اور سوالات", desc:"گنتی، اشیاء کی وضاحت، اور کون/کیا/کہاں/کب/کیوں پوچھنا۔" },
+  { id:"u6", track:"standard", title:"یونٹ 6 — آنا جانا", desc:"آپ کہاں جا رہے ہیں، اور وہاں پہنچانے والے حروفِ جار کے قواعد۔" },
+  { id:"u7", track:"standard", title:"یونٹ 7 — لوگوں کی وضاحت", desc:"ملکیتی صفتیں، اور شکل و شخصیت بیان کرنے کے الفاظ۔" },
+  { id:"u8", track:"standard", title:"یونٹ 8 — کھانا اور آرڈر دینا", desc:"ریستوران کے الفاظ، اور شائستگی سے کچھ مانگنے کا طریقہ۔" },
+  { id:"u9", track:"standard", title:"یونٹ 9 — وقت اور روزمرہ معمولات", desc:"وقت بتانا، ہفتے کے دن، اور اضافی ضمیری افعال کا ابتدائی تعارف۔" },
+  { id:"u10", track:"standard", title:"یونٹ 10 — جلد آ رہا ہے", desc:"مزید اسباق جلد شامل کیے جائیں گے۔" }
 ];
 
 const tracks = [
@@ -641,5 +646,363 @@ const chapters = [
       { icon:"🔴", ar:"Mi piace il colore rosso", plain:"Mi piace il colore rosso", translit:"mee PYA-cheh eel ko-LOH-reh ROHS-so", meaning:"مجھے سرخ رنگ پسند ہے" },
       { icon:"❓", ar:"Perché studi l'italiano?", plain:"Perché studi l'italiano?", translit:"pehr-KEH STOO-dee lee-ta-LYAH-no", meaning:"تم اطالوی زبان کیوں سیکھ رہے ہو؟" }
     ]
+  },
+
+  {
+    id: 6,
+    unit: "u6",
+    label: "سبق 6",
+    difficulty: 4,
+    requires: 5,
+    icon: "🧭",
+    title: "حروفِ جار اور Andare (جانا)",
+    arabicTitle: "Preposizioni e Andare",
+    desc: "فعل andare، اور وہ حروفِ جار جو آپ کو منزل تک پہنچاتے ہیں۔",
+    locked: false,
+
+    content: [
+      { type:"p", text:"اطالوی میں چھوٹے الفاظ بھی بڑا کردار ادا کرتے ہیں۔ اس سبق میں andare (\"جانا\") سیکھیں گے — ایک بے قاعدہ فعل جو آپ مسلسل استعمال کریں گے — اور اس کے ساتھ آنے والے حروفِ جار بھی۔" },
+      { type:"h", text:"Andare — حال کا صیغہ" },
+      { type:"pattern", ar:"io vado · tu vai · lui/lei va", translit:"VAH-do · VAH-ee · vah", desc:"میں جاتا/جاتی ہوں · تم جاتے/جاتی ہو (غیر رسمی) · وہ جاتا/جاتی ہے۔ یہ فعل بے قاعدہ ہے — سبق 4 کے -are قاعدے پر عمل نہیں کرتا، اس لیے اسے الگ سے یاد کرنا بہتر ہے۔" },
+      { type:"h", text:"A بمقابلہ In" },
+      { type:"p", text:"دونوں کا مطلب تقریباً \"کی طرف\" ہے، لیکن انتخاب منزل پر منحصر ہے: کسی شہر یا \"اسکول\" جیسے مقررہ محاورے سے پہلے a؛ کسی ملک یا بند جگہ سے پہلے in۔" },
+      { type:"examples", items:[
+        { icon:"🏫", ar:"Vado a scuola", translit:"VAH-do ah SKWOH-la", meaning:"میں اسکول جاتا ہوں" },
+        { icon:"🏢", ar:"Vado in ufficio", translit:"VAH-do een oof-FEE-cho", meaning:"میں دفتر جاتا ہوں" },
+        { icon:"🇮🇹", ar:"Vado in Italia", translit:"VAH-do een ee-TAH-lya", meaning:"میں اٹلی جاتا ہوں" }
+      ]},
+      { type:"note", html:"<strong>\"گھر\" خاص ہے:</strong> جیسے انگریزی میں \"I go home\" کہا جاتا ہے (بغیر \"to the\" کے)، ویسے ہی اطالوی میں <em>vado a casa</em> کہا جاتا ہے — یہاں بھی کسی آرٹیکل کی ضرورت نہیں۔" }
+    ],
+
+    vocabCategories: [
+      { name:"جگہیں", words:[
+        {icon:"🏫", ar:"la scuola", translit:"la SKWOH-la", en:"اسکول"},
+        {icon:"💼", ar:"il lavoro", translit:"eel la-VOH-ro", en:"کام / نوکری"},
+        {icon:"🛒", ar:"il mercato", translit:"eel mehr-KAH-to", en:"بازار"},
+        {icon:"🏢", ar:"l'ufficio", translit:"loof-FEE-cho", en:"دفتر"},
+        {icon:"🍽️", ar:"il ristorante", translit:"eel ree-sto-RAHN-teh", en:"ریستوران"},
+        {icon:"✈️", ar:"l'aeroporto", translit:"la-eh-ro-POR-to", en:"ہوائی اڈا"},
+        {icon:"🚉", ar:"la stazione", translit:"la sta-tsee-OH-neh", en:"اسٹیشن"},
+        {icon:"🌳", ar:"il parco", translit:"eel PAR-ko", en:"پارک"}
+      ]}
+    ],
+
+    exercises: [
+      {
+        id:"it6-ex1", type:"mcq", title:"مشق 1 — Andare اور حروفِ جار",
+        instructions:"درست جواب منتخب کریں۔",
+        items:[
+          { promptText:"Io ___ a scuola (میں اسکول جاتا ہوں)۔", options:["vado","vai","va"], correct:0 },
+          { promptText:"Tu ___ in ufficio (تم دفتر جاتے ہو)۔", options:["vado","vai","va"], correct:1 },
+          { promptText:"کون سا حرفِ جار کسی ملک، جیسے \"Italia\"، سے پہلے آتا ہے؟", options:["a","in","di"], correct:1 },
+          { promptText:"کون سا حرفِ جار مقررہ فقرے \"go to school\" کے ساتھ آتا ہے؟", options:["a","in","di"], correct:0 }
+        ]
+      },
+      {
+        id:"it6-ex2", type:"matching", title:"مشق 2 — جگہ ملائیں",
+        instructions:"کسی جگہ پر ٹیپ کریں، پھر اس کے معنی پر ٹیپ کریں۔",
+        pairs:[
+          { left:"la scuola", right:"اسکول" },
+          { left:"il lavoro", right:"کام" },
+          { left:"il ristorante", right:"ریستوران" },
+          { left:"l'aeroporto", right:"ہوائی اڈا" }
+        ]
+      },
+      {
+        id:"it6-ex3", type:"translate", title:"مشق 3 — ترجمہ کریں",
+        instructions:"اردو مفہوم لکھیں۔",
+        items:[
+          { icon:"🧭", ar:"Vado a scuola", keywords:["اسکول"] },
+          { icon:"🧭", ar:"Vado in Italia", keywords:["اٹلی"] },
+          { icon:"🛒", ar:"Il mercato è grande", keywords:["بازار"] }
+        ]
+      },
+      {
+        id:"it6-ex4", type:"sentence", title:"مشق 4 — جملہ بنائیں",
+        instructions:"الفاظ کو درست ترتیب میں ٹیپ کریں۔",
+        items:[
+          { words:["scuola","a","Vado"], answer:["Vado","a","scuola"] },
+          { words:["Italia","in","Vado"], answer:["Vado","in","Italia"] }
+        ]
+      }
+    ],
+
+    speakingPhrases: [
+      { icon:"🏫", ar:"Vado a scuola", plain:"Vado a scuola", translit:"VAH-do ah SKWOH-la", meaning:"میں اسکول جاتا ہوں" },
+      { icon:"💼", ar:"Vado in ufficio", plain:"Vado in ufficio", translit:"VAH-do een oof-FEE-cho", meaning:"میں دفتر جاتا ہوں" },
+      { icon:"❓", ar:"Dove vai?", plain:"Dove vai?", translit:"DOH-veh vah-EE", meaning:"تم کہاں جا رہے ہو؟" },
+      { icon:"🇮🇹", ar:"Vado in Italia con un amico", plain:"Vado in Italia con un amico", translit:"VAH-do een ee-TAH-lya kohn oon a-MEE-ko", meaning:"میں ایک دوست کے ساتھ اٹلی جا رہا ہوں" }
+    ]
+  },
+
+  {
+    id: 7,
+    unit: "u7",
+    label: "سبق 7",
+    difficulty: 4,
+    requires: 6,
+    icon: "🎨",
+    title: "ملکیتی صفتیں اور لوگوں کی وضاحت",
+    arabicTitle: "Aggettivi Possessivi e Descrizioni",
+    desc: "\"میرا\" اور \"تمہارا\"، اور شکل و شخصیت بیان کرنے کے الفاظ۔",
+    locked: false,
+
+    content: [
+      { type:"p", text:"اطالوی میں \"میرا\" اور \"تمہارا\" جیسے ملکیتی الفاظ دراصل صفتیں ہیں — یعنی یہ اس چیز کے مطابق بدلتے ہیں جو رکھی گئی ہے، نہ کہ اس شخص کے مطابق جو رکھتا ہے۔ یہ بات بہت سے سیکھنے والوں کو الجھا دیتی ہے، اس لیے اسے آہستگی سے سمجھنا بہتر ہے۔" },
+      { type:"h", text:"Mio/Mia (میرا)" },
+      { type:"pattern", ar:"il mio libro · la mia casa · i miei libri · le mie case", translit:"eel MEE-oh LEE-bro · la MEE-ah KAH-za · ee mee-EH-ee LEE-bree · leh MEE-eh KAH-zeh", desc:"میری کتاب · میرا گھر · میری کتابیں · میرے گھر — mio/mia/miei/mie سب کا مطلب \"میرا\" ہے، لیکن خاتمہ اس چیز کے مطابق بدلتا ہے جو رکھی گئی ہے، کبھی بھی رکھنے والے کے مطابق نہیں۔" },
+      { type:"h", text:"Tuo/Tua (تمہارا)" },
+      { type:"p", text:"\"تمہارا\" (غیر رسمی) بالکل اسی قاعدے پر چلتا ہے: il tuo libro، la tua casa، i tuoi libri، le tue case۔" },
+      { type:"h", text:"لوگوں کی وضاحت" },
+      { type:"examples", items:[
+        { icon:"📏", ar:"Lui è alto", translit:"loo-EE eh AHL-to", meaning:"وہ (مرد) لمبا ہے" },
+        { icon:"😊", ar:"Lei è simpatica", translit:"lehy eh seem-PAH-tee-ka", meaning:"وہ (عورت) مہربان/اچھی ہے" },
+        { icon:"🧠", ar:"Sono intelligente", translit:"SOH-no een-tel-lee-JEHN-teh", meaning:"میں ذہین ہوں (یہی لفظ ہر جنس کے لیے)" }
+      ]},
+      { type:"note", html:"<strong>سبق 3 یاد ہے؟</strong> intelligente کا خاتمہ -e پر ہے، اس لیے — grande کی طرح — یہ جنس کے لیے بالکل نہیں بدلتا، صرف تعداد کے لیے بدلتا ہے (intelligente → intelligenti)۔" }
+    ],
+
+    vocabCategories: [
+      { name:"لوگوں کی وضاحت", words:[
+        {icon:"📏", ar:"alto/a", translit:"AHL-to/ta", en:"لمبا"},
+        {icon:"📏", ar:"basso/a", translit:"BAHS-so/sa", en:"چھوٹا قد"},
+        {icon:"😊", ar:"simpatico/a", translit:"seem-PAH-tee-ko/ka", en:"مہربان، اچھا"},
+        {icon:"😳", ar:"timido/a", translit:"TEE-mee-do/da", en:"شرمیلا"},
+        {icon:"🧠", ar:"intelligente", translit:"een-tel-lee-JEHN-teh", en:"ذہین"},
+        {icon:"👤", ar:"il mio / la mia", translit:"eel MEE-oh / la MEE-ah", en:"میرا"},
+        {icon:"👤", ar:"il tuo / la tua", translit:"eel TOO-oh / la TOO-ah", en:"تمہارا"}
+      ]}
+    ],
+
+    exercises: [
+      {
+        id:"it7-ex1", type:"mcq", title:"مشق 1 — ملکیتی الفاظ اور صفتیں",
+        instructions:"درست جواب منتخب کریں۔",
+        items:[
+          { promptText:"\"میری کتاب\" (libro مذکر ہے) کیا ہے؟", options:["il mio libro","la mia libro","il tuo libro"], correct:0 },
+          { promptText:"\"میرا گھر\" (casa مؤنث ہے) کیا ہے؟", options:["il mio casa","la mia casa","il mio case"], correct:1 },
+          { promptText:"کون سی صفت دونوں جنسوں کے لیے بالکل ایک جیسی رہتی ہے؟", options:["alto","simpatica","intelligente"], correct:2 },
+          { promptText:"\"Lei è simpatica\" کا مطلب کیا ہے؟", options:["وہ لمبی ہے","وہ مہربان ہے","وہ شرمیلی ہے"], correct:1 }
+        ]
+      },
+      {
+        id:"it7-ex2", type:"matching", title:"مشق 2 — وضاحت ملائیں",
+        instructions:"کسی لفظ پر ٹیپ کریں، پھر اس کے معنی پر ٹیپ کریں۔",
+        pairs:[
+          { left:"alto", right:"لمبا" },
+          { left:"basso", right:"چھوٹا قد" },
+          { left:"timido", right:"شرمیلا" },
+          { left:"intelligente", right:"ذہین" }
+        ]
+      },
+      {
+        id:"it7-ex3", type:"translate", title:"مشق 3 — ترجمہ کریں",
+        instructions:"اردو مفہوم لکھیں۔",
+        items:[
+          { icon:"🤝", ar:"Il mio amico è simpatico", keywords:["دوست","مہربان"] },
+          { icon:"🏠", ar:"La tua casa è grande", keywords:["گھر","بڑا"] },
+          { icon:"😳", ar:"Sono timido", keywords:["شرمیلا"] }
+        ]
+      },
+      {
+        id:"it7-ex4", type:"sentence", title:"مشق 4 — جملہ بنائیں",
+        instructions:"الفاظ کو درست ترتیب میں ٹیپ کریں۔",
+        items:[
+          { words:["alto","è","Lui"], answer:["Lui","è","alto"] },
+          { words:["mia","È","casa","la"], answer:["È","la","mia","casa"] }
+        ]
+      }
+    ],
+
+    speakingPhrases: [
+      { icon:"📏", ar:"Il mio amico è alto", plain:"Il mio amico è alto", translit:"eel MEE-oh a-MEE-ko eh AHL-to", meaning:"میرا دوست لمبا ہے" },
+      { icon:"😊", ar:"La mia sorella è simpatica", plain:"La mia sorella è simpatica", translit:"la MEE-ah so-REHL-la eh seem-PAH-tee-ka", meaning:"میری بہن مہربان ہے" },
+      { icon:"😳", ar:"Sono timido", plain:"Sono timido", translit:"SOH-no TEE-mee-do", meaning:"میں شرمیلا ہوں" },
+      { icon:"📕", ar:"Il tuo libro è grande", plain:"Il tuo libro è grande", translit:"eel TOO-oh LEE-bro eh GRAHN-deh", meaning:"تمہاری کتاب بڑی ہے" }
+    ]
+  },
+
+  {
+    id: 8,
+    unit: "u8",
+    label: "سبق 8",
+    difficulty: 5,
+    requires: 7,
+    icon: "🍕",
+    title: "کھانا اور آرڈر دینا",
+    arabicTitle: "Cibo e Ordinare",
+    desc: "ریستوران کے الفاظ، اور شائستگی سے کچھ مانگنے کا طریقہ۔",
+    locked: false,
+
+    content: [
+      { type:"p", text:"اب جو کچھ سیکھا ہے اسے عملی جگہ استعمال کرنے کا وقت ہے: ریستوران۔ اس سبق میں شائستگی سے آرڈر دینا اور دستیاب چیزوں کے بارے میں بات کرنا سیکھیں گے۔" },
+      { type:"h", text:"Vorrei (میں چاہوں گا/گی)" },
+      { type:"pattern", ar:"Vorrei...", translit:"vor-RAY", desc:"میں ... چاہوں گا/گی — کچھ آرڈر کرنے یا مانگنے کا شائستہ طریقہ۔ voglio (میں چاہتا ہوں) سے کہیں زیادہ نرم، اور یہی وہ لفظ ہے جو آپ ریستورانوں میں حقیقتاً سنیں گے۔" },
+      { type:"h", text:"C'è / Ci sono (ہے / ہیں)" },
+      { type:"examples", items:[
+        { icon:"🍕", ar:"C'è pizza?", translit:"cheh PEET-tsa", meaning:"کیا پیزا ہے؟" },
+        { icon:"☕", ar:"Ci sono due caffè", translit:"chee SOH-no DOO-eh kaf-FEH", meaning:"دو کافیاں ہیں" }
+      ]},
+      { type:"note", html:"<strong>c'è</strong> واحد چیزوں کے لیے ہے، اور <strong>ci sono</strong> جمع کے لیے — بالکل وہی واحد/جمع کا احساس جو آپ اطالوی میں پہلے ہی کہیں اور استعمال کر چکے ہیں۔" }
+    ],
+
+    vocabCategories: [
+      { name:"کھانا اور مشروبات", words:[
+        {icon:"🍕", ar:"la pizza", translit:"la PEET-tsa", en:"پیزا"},
+        {icon:"🍝", ar:"la pasta", translit:"la PAH-sta", en:"پاستا"},
+        {icon:"☕", ar:"il caffè", translit:"eel kaf-FEH", en:"کافی"},
+        {icon:"💧", ar:"l'acqua", translit:"LAHK-kwa", en:"پانی"},
+        {icon:"🍷", ar:"il vino", translit:"eel VEE-no", en:"شراب"},
+        {icon:"🍨", ar:"il gelato", translit:"eel jeh-LAH-to", en:"آئس کریم"},
+        {icon:"🧾", ar:"il conto", translit:"eel KOHN-to", en:"بل"},
+        {icon:"🙏", ar:"per favore", translit:"pehr fa-VOH-reh", en:"براہ کرم"}
+      ]}
+    ],
+
+    exercises: [
+      {
+        id:"it8-ex1", type:"mcq", title:"مشق 1 — شائستگی سے آرڈر دینا",
+        instructions:"درست جواب منتخب کریں۔",
+        items:[
+          { promptText:"\"میں چاہوں گا/گی\" کہنے کا شائستہ طریقہ کیا ہے؟", options:["voglio","vorrei","ho"], correct:1 },
+          { promptText:"\"کیا پیزا ہے؟\" کیا ہے؟", options:["C'è pizza?","Ci sono pizza?","È pizza?"], correct:0 },
+          { promptText:"\"دو کافیاں ہیں\" کیا ہے؟", options:["C'è due caffè","Ci sono due caffè","Sono due caffè"], correct:1 },
+          { promptText:"\"بل، براہ کرم\" کیا ہے؟", options:["Il conto, per favore","Il vino, per favore","La pasta, per favore"], correct:0 }
+        ]
+      },
+      {
+        id:"it8-ex2", type:"matching", title:"مشق 2 — کھانا ملائیں",
+        instructions:"کسی لفظ پر ٹیپ کریں، پھر اس کے معنی پر ٹیپ کریں۔",
+        pairs:[
+          { left:"la pizza", right:"پیزا" },
+          { left:"il caffè", right:"کافی" },
+          { left:"l'acqua", right:"پانی" },
+          { left:"il gelato", right:"آئس کریم" }
+        ]
+      },
+      {
+        id:"it8-ex3", type:"translate", title:"مشق 3 — ترجمہ کریں",
+        instructions:"اردو مفہوم لکھیں۔",
+        items:[
+          { icon:"🍕", ar:"Vorrei una pizza", keywords:["پیزا"] },
+          { icon:"🍷", ar:"C'è vino?", keywords:["شراب"] },
+          { icon:"🧾", ar:"Il conto, per favore", keywords:["بل"] }
+        ]
+      },
+      {
+        id:"it8-ex4", type:"sentence", title:"مشق 4 — جملہ بنائیں",
+        instructions:"الفاظ کو درست ترتیب میں ٹیپ کریں۔",
+        items:[
+          { words:["pizza","una","Vorrei"], answer:["Vorrei","una","pizza"] },
+          { words:["favore","conto","per","Il"], answer:["Il","conto","per","favore"] }
+        ]
+      }
+    ],
+
+    speakingPhrases: [
+      { icon:"🍕", ar:"Vorrei una pizza", plain:"Vorrei una pizza", translit:"vor-RAY OO-na PEET-tsa", meaning:"میں ایک پیزا چاہوں گا/گی" },
+      { icon:"🍨", ar:"C'è gelato?", plain:"C'è gelato?", translit:"cheh jeh-LAH-to", meaning:"کیا آئس کریم ہے؟" },
+      { icon:"🧾", ar:"Il conto, per favore", plain:"Il conto, per favore", translit:"eel KOHN-to pehr fa-VOH-reh", meaning:"بل، براہ کرم" },
+      { icon:"☕", ar:"Vorrei un caffè e un'acqua", plain:"Vorrei un caffè e un'acqua", translit:"vor-RAY oon kaf-FEH eh oo-NAHK-kwa", meaning:"میں ایک کافی اور ایک پانی چاہوں گا/گی" }
+    ]
+  },
+
+  {
+    id: 9,
+    unit: "u9",
+    label: "سبق 9",
+    difficulty: 5,
+    requires: 8,
+    icon: "🕐",
+    title: "وقت اور روزمرہ معمولات",
+    arabicTitle: "L'Ora e la Routine Quotidiana",
+    desc: "وقت بتانا، ہفتے کے دن، اور اضافی ضمیری افعال کا ابتدائی تعارف۔",
+    locked: false,
+
+    content: [
+      { type:"h", text:"وقت بتانا" },
+      { type:"pattern", ar:"Che ore è? · Sono le tre", translit:"keh OH-reh EH · SOH-no leh treh", desc:"وقت کیا ہوا ہے؟ · تین بج رہے ہیں — اطالوی زیادہ تر اوقات کے لیے \"sono le\" (لفظی معنی \"وہ ہیں\") استعمال کرتی ہے۔" },
+      { type:"h", text:"اضافی ضمیری افعال: ایک ابتدائی جھلک" },
+      { type:"p", text:"کچھ روزمرہ کام ایک چھوٹے اضافی ضمیر (mi) کے ساتھ آتے ہیں، فعل سے پہلے — لفظی معنی \"میں خود کو جگاتا ہوں\"، \"میں خود کو اٹھاتا ہوں\"۔ مکمل قاعدہ آپ کسی بعد کے سبق میں سیکھیں گے؛ ابھی صرف یہ دو عام فقرے پہچان لیں۔" },
+      { type:"examples", items:[
+        { icon:"⏰", ar:"Mi sveglio presto", translit:"mee ZVEH-lyo PREHS-to", meaning:"میں جلدی جاگتا ہوں" },
+        { icon:"🧍", ar:"Mi alzo presto", translit:"mee AHL-tso PREHS-to", meaning:"میں جلدی اٹھتا ہوں" }
+      ]},
+      { type:"note", html:"<strong>ہفتے کے دن</strong> اطالوی میں بڑے حرف سے شروع نہیں ہوتے (انگریزی کے برعکس) — lunedì، نہ کہ Lunedì — اور ہفتہ اتوار سے نہیں بلکہ پیر سے شروع ہوتا ہے۔" }
+    ],
+
+    vocabCategories: [
+      { name:"وقت اور دن", words:[
+        {icon:"📅", ar:"lunedì", translit:"loo-neh-DEE", en:"پیر"},
+        {icon:"📅", ar:"martedì", translit:"mar-teh-DEE", en:"منگل"},
+        {icon:"📅", ar:"mercoledì", translit:"mehr-ko-leh-DEE", en:"بدھ"},
+        {icon:"📅", ar:"giovedì", translit:"joh-veh-DEE", en:"جمعرات"},
+        {icon:"📅", ar:"venerdì", translit:"veh-nehr-DEE", en:"جمعہ"},
+        {icon:"⏰", ar:"mi sveglio", translit:"mee ZVEH-lyo", en:"میں جاگتا ہوں"},
+        {icon:"🧍", ar:"mi alzo", translit:"mee AHL-tso", en:"میں اٹھتا ہوں"},
+        {icon:"⏱️", ar:"presto", translit:"PREHS-to", en:"جلدی"},
+        {icon:"📆", ar:"oggi", translit:"OHD-jee", en:"آج"}
+      ]}
+    ],
+
+    exercises: [
+      {
+        id:"it9-ex1", type:"mcq", title:"مشق 1 — وقت اور معمولات",
+        instructions:"درست جواب منتخب کریں۔",
+        items:[
+          { promptText:"\"وقت کیا ہوا ہے؟\" کیا ہے؟", options:["Che ore è?","Che giorno è?","Dove sei?"], correct:0 },
+          { promptText:"\"پیر\" کیا ہے؟", options:["martedì","lunedì","venerdì"], correct:1 },
+          { promptText:"\"میں جاگتا ہوں\" کیا ہے؟", options:["mi alzo","mi sveglio","sono sveglio"], correct:1 },
+          { promptText:"زیادہ تر اوقات کے لیے اطالوی \"یہ ہے...\" کہنے کے لیے کیا استعمال کرتی ہے؟", options:["è le","sono le","ho le"], correct:1 }
+        ]
+      },
+      {
+        id:"it9-ex2", type:"matching", title:"مشق 2 — دن ملائیں",
+        instructions:"کسی دن پر ٹیپ کریں، پھر اس کے معنی پر ٹیپ کریں۔",
+        pairs:[
+          { left:"lunedì", right:"پیر" },
+          { left:"mercoledì", right:"بدھ" },
+          { left:"giovedì", right:"جمعرات" },
+          { left:"venerdì", right:"جمعہ" }
+        ]
+      },
+      {
+        id:"it9-ex3", type:"translate", title:"مشق 3 — ترجمہ کریں",
+        instructions:"اردو مفہوم لکھیں۔",
+        items:[
+          { icon:"⏰", ar:"Mi sveglio presto", keywords:["جاگتا","جلدی"] },
+          { icon:"📆", ar:"Oggi è lunedì", keywords:["پیر"] },
+          { icon:"🕐", ar:"Che ore è?", keywords:["وقت"] }
+        ]
+      },
+      {
+        id:"it9-ex4", type:"sentence", title:"مشق 4 — جملہ بنائیں",
+        instructions:"الفاظ کو درست ترتیب میں ٹیپ کریں۔",
+        items:[
+          { words:["è","lunedì","Oggi"], answer:["Oggi","è","lunedì"] },
+          { words:["presto","sveglio","Mi"], answer:["Mi","sveglio","presto"] }
+        ]
+      }
+    ],
+
+    speakingPhrases: [
+      { icon:"🕐", ar:"Che ore è?", plain:"Che ore è?", translit:"keh OH-reh EH", meaning:"وقت کیا ہوا ہے؟" },
+      { icon:"⏰", ar:"Mi sveglio presto", plain:"Mi sveglio presto", translit:"mee ZVEH-lyo PREHS-to", meaning:"میں جلدی جاگتا ہوں" },
+      { icon:"📆", ar:"Oggi è lunedì", plain:"Oggi è lunedì", translit:"OHD-jee eh loo-neh-DEE", meaning:"آج پیر ہے" },
+      { icon:"🧍", ar:"Mi alzo presto", plain:"Mi alzo presto", translit:"mee AHL-tso PREHS-to", meaning:"میں جلدی اٹھتا ہوں" }
+    ]
+  },
+
+  {
+    id: 10,
+    unit: "u10",
+    label: "سبق 10",
+    difficulty: 6,
+    requires: 9,
+    icon: "🚧",
+    title: "مزید اسباق — جلد آ رہے ہیں",
+    arabicTitle: "Presto...",
+    desc: "اگلا سبق تیار کیا جا رہا ہے — مکمل اضافی ضمیری افعال، ماضی کا صیغہ، اور مزید روزمرہ اطالوی زبان جلد شامل ہوگی۔",
+    locked: true
   }
 ];
